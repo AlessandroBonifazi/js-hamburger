@@ -2,17 +2,24 @@
 console.log('JS OK!')
 
 // JS Hamburger
-document.querySelector(".fa-bars").addEventListener('click',
+const hamburgerNav = document.querySelector('div.hamburger-menu');
+
+const hamburgerIcon = document.querySelector(".fa-bars");
+
+const closeIcon = document.querySelector(".close");
+
+hamburgerIcon.addEventListener('click',
     function () {
         console.log('HBG Clicked!');
-        const hamburgerNav = document.querySelector('div.hamburger-menu');
-        hamburgerNav.style.display = 'block';
+        // hamburgerNav.style.display = 'block';
+        hamburgerNav.classList.add('active');
     }
 );
-document.querySelector(".close").addEventListener('click',
+closeIcon.addEventListener('click',
     function () {
         console.log('X Clicked!');
-        const hamburgerNav = document.querySelector('div.hamburger-menu');
-        hamburgerNav.style.display = 'none';
+        // hamburgerNav.style.display = 'none';
+        hamburgerNav.classList.remove('active');
+
     }
 );    
